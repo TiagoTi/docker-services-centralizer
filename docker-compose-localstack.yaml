@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    tty: true
+    ports:
+      - "4567-4582:4567-4582"
+      - "8088:8080"
+    environment:
+      - SERVICES=${SERVICES- }

@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  sonar:
+    image: sonarqube
+    container_name: sonar
+    tty: true
+    ports:
+      - 9000:9000

@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  mkdocs:
+    build:
+      context: build/context/mkdocs
+    container_name: mkdocs
+    volumes:
+      - ${MKDOCS_VOL}:/data
+    tty: true
+    ports:
+      - 6379:6379

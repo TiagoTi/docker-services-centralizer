@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  mikedb:
+    container_name: mikedb
+    image: postgres
+    tty: true
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=mike
+    ports:
+       - "5432:5432"
