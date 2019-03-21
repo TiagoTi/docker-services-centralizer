@@ -1,4 +1,6 @@
 ## Configurações
+
+
 ### Se não tiver uma rede dedicada crie uma
 
 ```bash
