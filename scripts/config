@@ -1,0 +1,3 @@
+. $MY_DOCKER_SERVICES_DIR/my_docker_services.sh
+
+docker-compose $dcfiles config

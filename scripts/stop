@@ -1,0 +1,2 @@
+. $MY_DOCKER_SERVICES_DIR/my_docker_services.sh
+stop $1
