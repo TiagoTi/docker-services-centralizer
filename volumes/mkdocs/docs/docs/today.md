@@ -19,6 +19,17 @@ essa eu abstrai o clustername é irrelevante para uma máquina efemera que só u
 `warning` `c.i tools | online` `prod | stage` TERESA_CLUSTER_URL: $(TERESA_CLUSTER_URL_PRD)
 essa aqui terá duas versões que são identificadas no job de stage e de prod
 
+
+POSTGRES_USER_PROD
+POSTGRES_PASSWORD_PROD
+POSTGRES_DB_PROD
+TERESA_CLUSTER_URL_PROD
+
+POSTGRES_USER_STAGE
+POSTGRES_PASSWORD_STAGE
+POSTGRES_DB_STAGE
+TERESA_CLUSTER_URL_STAGE
+
 ```
 gitlab-runner exec docker \
 		--env PYPI_USERNAME=${PYPI_USERNAME} \
