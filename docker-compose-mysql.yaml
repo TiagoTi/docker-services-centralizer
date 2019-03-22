@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  mysql5.5:
+    container_name: mysql_0
+    image: mysql:5.5
+    env_file:
+      - .env
+      - docker-compose-mysql.env
+    ports:
+      - 3366:3306
