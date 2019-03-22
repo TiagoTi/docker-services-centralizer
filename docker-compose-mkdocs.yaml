@@ -6,7 +6,16 @@ services:
       context: build/context/mkdocs
     container_name: mkdocs
     volumes:
-      - ${MKDOCS_VOL}:/data
+      - ${MKDOCS_VOL}:/docs
     tty: true
     ports:
-      - 6379:6379
+      - 8000:8000
+    working_dir: /docs
+    entrypoint:
+      - mkdocs
+      - serve
+      - --dev-addr
+      - 0.0.0.0:8000
+      - --livereload
+      - --dirtyreload
+      - --verbose

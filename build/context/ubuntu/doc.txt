@@ -1,0 +1,11 @@
+#build
+docker build -t ubuntu/seed:0.0.2 .
+
+#taggin
+docker image tag ubuntu/seed:0.0.2 localhost:5000/ubuntu/seed:0.0.2
+
+#pushing
+docker push localhost:5000/ubuntu/seed:0.0.2
+
+#pull
+docker pull localhost:5000/ubuntu/seed:0.0.2
