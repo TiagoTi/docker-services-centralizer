@@ -1,0 +1,9 @@
+site_name: Tiago
+nav:
+  - Home: index.md
+  - Today: today.md
+  - Docker: docker.md
+  - Shell Script: shell-script.md
+  - Mkdocs: mkdocs.md
+theme: readthedocs
+#theme: readthedocs
