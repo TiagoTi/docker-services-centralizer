@@ -1,13 +1,13 @@
 ## Configurações
 
- export MY_DOCKER_SERVICES_DIR=/home/user/services
+ export MY_DOCKER_SERVICES_DIR=/your-service-path
 
 
 ### Se não tiver uma rede dedicada crie uma
 
 ```bash
 chmod +x network.sh
-./network.sh
+./scripts/create-docker-network.sh
 ```
 
 ## TODO
