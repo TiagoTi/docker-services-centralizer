@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+
+# Portainer - Simplificando o gerenciamento dos containers docker
+# https://youtu.be/11vgqPlMFuM
+
+# portainer.io
+# https://www.portainer.io/
