@@ -5,3 +5,5 @@ echo "export MY_DOCKER_SERVICES_DIR=`pwd`" >> ~/.bashrc
 echo "export PATH=$PATH:$MY_DOCKER_SERVICES_DIR/scripts" >> ~/.bashrc
 
 `reopen terminal`
+
+## [Install Docker Compose](https://docs.docker.com/compose/install/)
