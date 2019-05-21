@@ -34,9 +34,10 @@ services:
   ubuntu:
     build:
       context: build/context/ubuntu
-    container_name: mkdocs
+    container_name: ubuntu
     tty: true
 ```
 
-
+Add new entry in `docker-compose.env` with you new docker file name
+`-f $MY_DOCKER_SERVICES_DIR/docker-compose-ubuntu.yaml \`
 
