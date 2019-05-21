@@ -11,3 +11,6 @@ Verify min version from compose to docker-file.yml 3.7
 
 
 ## Obtain `.env` to use docker created based in personal projects
+
+
+# Add a new docker to stack
