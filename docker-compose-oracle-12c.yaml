@@ -1,0 +1,10 @@
+version: "3.7"
+#Alpine
+services:
+  oracle-12c:
+    image: laboratoriobridge/oracle-12c
+    container_name: oracle-12c
+    tty: true
+    ports:
+      - 8888:8080
+      - 1521:1521

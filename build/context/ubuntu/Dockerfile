@@ -1,6 +1,4 @@
 FROM ubuntu
 
-RUN apt update -y &&\
-  apt install -y git vim curl wget telnet
-
-RUN apt install -y sl
+RUN apt-get update -y &&\
+  apt-get install -y git vim curl wget telnet iputils-*

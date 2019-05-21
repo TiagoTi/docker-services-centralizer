@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  teresa:
+    build:
+      context: build/context/teresa
+    container_name: teresa
+    # volumes:
+    #   - ${HOME}/.teresa:/root/.teresa
+    tty: true
+    working_dir: /root

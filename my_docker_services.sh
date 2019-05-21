@@ -40,3 +40,8 @@ stop(){
 logs(){
 	docker-compose $dcfiles logs -f $1;
 }
+
+
+build(){
+	docker-compose $dcfiles build $1;
+}

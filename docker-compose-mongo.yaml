@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    volumes:
+      - ${MONGO_VOL}:/data/db
+    tty: true
+    ports:
+      - 27018:27018
+      - 27017:27017

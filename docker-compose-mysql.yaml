@@ -1,10 +1,12 @@
-version: "3"
-services: 
-  mysql5.5:
+version: "3.7"
+services:
+  mysql_0:
     container_name: mysql_0
     image: mysql:5.5
     env_file:
       - .env
-      - docker-compose-mysql.env
+    # command: --default-authentication-plugin=mysql_native_password
+    # restart: always
+    tty: true
     ports:
       - 3366:3306

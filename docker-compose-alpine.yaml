@@ -1,0 +1,9 @@
+version: "3.7"
+#Alpine
+services:
+  alpine:
+    image: alpine
+    container_name: alpine
+    volumes:
+      - ${ALPINE_VOL}:/alpine_sahred
+    tty: true
