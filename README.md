@@ -12,5 +12,12 @@ Verify min version from compose to docker-file.yml 3.7
 
 ## Obtain `.env` to use docker created based in personal projects
 
+---
 
 # Add a new docker to stack
+
+Create a new file to builded image (in this sample I will create a ubuntu docker)
+
+`touch $MY_DOCKER_SERVICES_DIR/docker-compose-ubuntu.yaml`
+
+
