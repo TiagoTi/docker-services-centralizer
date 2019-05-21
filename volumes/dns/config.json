@@ -1,0 +1,16 @@
+{
+	"remoteDnsServers": [[8,8,8,8], [4,4,4,4]],
+	"envs": [
+		{
+			"name": ""
+		}
+	],
+	"activeEnv": "Default",
+	"lastId": 1,
+	"webServerPort": 0,
+	"dnsServerPort": 0,
+	"defaultDns": null,
+	"logLevel": "",
+	"logFile": "",
+	"registerContainerNames": null
+}
