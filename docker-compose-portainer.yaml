@@ -8,6 +8,8 @@ services:
     tty: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9001:9000"
 
 
 # Portainer - Simplificando o gerenciamento dos containers docker
