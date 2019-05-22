@@ -5,5 +5,6 @@ services:
     image: sonarqube
     container_name: sonar
     tty: true
+    restart: always
     ports:
       - 9000:9000
