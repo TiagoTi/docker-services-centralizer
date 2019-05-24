@@ -1,0 +1,10 @@
+version: "3.7"
+#Alpine
+services:
+  h2:
+    build:
+      context: build/context/h2
+    container_name: h2
+    volumes:
+      - ${H2_VOL}:/opt/h2-data
+    tty: true
