@@ -1,5 +1,3 @@
 .env
-volumes/redis/
-volumes/registry/
-volumes/mongo/
-volumes/alpine/
+volumes/*
+!volumes/mkdocs
