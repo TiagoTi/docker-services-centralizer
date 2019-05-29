@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  postgres_9_6:
+    container_name: postgres_9_6
+    image: postgres:9.6
+    env_file:
+      - .env
+    tty: true
+    ports:
+      - 5432:5432
