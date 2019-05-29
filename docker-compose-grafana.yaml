@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    tty: true
+    #restart: always
