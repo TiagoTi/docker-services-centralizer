@@ -1,0 +1,18 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=827846
+	// for the documentation about the extensions.json format
+	"recommendations": [
+        "ckolkman.vscode-postgres",
+        "ms-python.python",
+        "pkief.material-icon-theme",
+        "janisdd.vscode-edit-csv",
+        "ms-azuretools.vscode-docker",
+        "njpwerner.autodocstring",
+        "eamodio.gitlens",
+        "magicstack.MagicPython",
+        "batisteo.vscode-django",
+        "mikestead.dotenv",
+        "formulahendry.terminal",
+        "doublefint.pgsql"
+	]
+}

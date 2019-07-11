@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/home/tiago/.virtualenvs/terry-terri/bin/python3",
+    "extensions.enabled":["ckolkman.vscode-postgres"]
+}
