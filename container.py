@@ -18,9 +18,13 @@ def docker_compose():
 
     if args.command:
         if args.command == "newlan":
-            print("ok vamos criar uma lan")
             command = f"docker network create --driver=bridge --subnet={args.commons_args[0]} {args.commons_args[1]}"
             run_linux_command(command)
+
+        if args.command == "start":
+            files = ' '.join(args.commons_args)
+            services = ' '.join(args.commons_args)
+            print(f"docker-compose -f {files} {args.command} {services}")
 
 
 if __name__ == '__main__':

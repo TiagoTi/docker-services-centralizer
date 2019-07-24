@@ -41,3 +41,22 @@ services:
 Add new entry in `docker-compose.env` with you new docker file name
 `-f $MY_DOCKER_SERVICES_DIR/docker-compose-ubuntu.yaml \`
 
+---
+## Install 
+
+```sh
+#make a folder to put script
+mkdir -p $HOME/bin
+
+#make dowload from bin
+curl -L https://github.com/TiagoTi/gitchu/releases/download/v0.0.0/container.py -o $HOME/bin/container && chmod +x $HOME/bin/container
+
+#add folder to path if necessary
+export PATH=$PATH:$HOME/bin
+
+## Use
+container start redis
+
+### Create a new lan
+container newlan 172.18.0.0/16 dev
+```
