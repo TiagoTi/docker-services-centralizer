@@ -3,12 +3,16 @@ import sys
 import os
 import argparse
 import glob
+from dotenv import load_dotenv
+load_dotenv()
 
-NAME="services"
-PATH="/home/tiago/Projects/docker-services-centralizer"
+
+NAME=os.getenv('DOCKER_SERVICES_CENTRALIZER_NAME')
+PATH=os.getenv('DOCKER_SERVICES_CENTRALIZER_PATH')
+DOCKER_COMPOSE_BIN=os.getenv('DOCKER_SERVICES_CENTRALIZER_PATH_BIN', 'docker-compose')
 PROJECT_DIRECTORY = f" --project-directory {PATH} "
 PROJECT_NAME = f" --project-name {NAME} "
-DOCKER_COMPOSE = f"docker-compose {PROJECT_DIRECTORY} {PROJECT_NAME} --file "
+DOCKER_COMPOSE = f"{DOCKER_COMPOSE_BIN} {PROJECT_DIRECTORY} {PROJECT_NAME} --file "
 
 
 def run_linux_command(command):
