@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  mockserver:
+    image: jamesdbloom/mockserver
+    container_name: mockserver
+    tty: true
+    ports:
+      - "1080:1080"

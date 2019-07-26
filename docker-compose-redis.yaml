@@ -4,8 +4,8 @@ services:
   redis:
     image: redis
     container_name: redis
-    volumes:
-      - ${REDIS_VOL}:/data
+    # volumes:
+    #   - ${REDIS_VOL}:/data
     tty: true
     ports:
       - 6379:6379

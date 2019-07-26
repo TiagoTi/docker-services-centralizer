@@ -4,8 +4,8 @@ services:
   mongo:
     image: mongo
     container_name: mongo
-    volumes:
-      - ${MONGO_VOL}:/data/db
+    # volumes:
+    #   - ${MONGO_VOL}:/data/db
     tty: true
     ports:
       - 27018:27018

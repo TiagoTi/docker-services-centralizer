@@ -1,4 +1,3 @@
 {
-    "python.pythonPath": "/home/tiago/.virtualenvs/terry-terri/bin/python3",
-    "extensions.enabled":["ckolkman.vscode-postgres"]
+    "python.pythonPath": "/home/tiago/.local/share/virtualenvs/docker-services-centralizer-JZEoKrVv/bin/python3.7"
 }
