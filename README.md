@@ -28,7 +28,7 @@ Define a Container Name: `container_name: mkdocs`
 ## The final sample is like:
 
 ```yaml
-version: "3.7"
+version: "3.3"
 
 services:
   ubuntu:
