@@ -12,6 +12,7 @@ services:
     tty: true
     depends_on:
       - vanellope_db
+      - vanellope_mock
     expose:
       - 8008
     ports:

@@ -2,6 +2,7 @@
 
 ```
 export VANELLOPE_SRC=/home/tiago/projetos/vanellope
+export VANELLOPE_MOCK_SRC=/home/tiago/projetos/resupply-frontend-pitaco-python-mock-server
 ```
 
 ## Config path

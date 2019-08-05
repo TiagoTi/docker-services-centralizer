@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  so:
+    image: ubuntu:devel
+    container_name: so
+    tty: true
