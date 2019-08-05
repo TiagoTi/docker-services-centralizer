@@ -13,6 +13,7 @@ services:
     depends_on:
       - vanellope_db
       - vanellope_mock
+      - redis
     expose:
       - 8008
     ports:
