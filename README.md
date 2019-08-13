@@ -1,4 +1,17 @@
-# All Services One Repo
+
+# The Monkey in the Jungle - All Services One Repo
+
+export THE_MONKEY_IN_THE_JUNGLE=$HOME/.the_monkey_in_the_jungle
+mkdir -p $THE_MONKEY_IN_THE_JUNGLE
+touch $THE_MONKEY_IN_THE_JUNGLE/vanellope.env
+alias ctnexport='source'
+ctnexport $THE_MONKEY_IN_THE_JUNGLE/vanellope.env
+
+para poder mapear os volumes usando os mesmo env do arquivo do serviço seria necessário rodar o env junto ao comando docker-compose;
+como não implementei o caso acima vou criar um alias `alias ctnexport='source'`
+
+.the_monkey_in_the_jungle
+THE_MONKEY_IN_THE_JUNGLE
 
 ```
 export VANELLOPE_SRC=/home/tiago/projetos/vanellope
@@ -30,7 +43,7 @@ Add a service name `ubuntu`
 Aad dir from Dockerfile `build/context/ubuntu` in context  
 Define a Container Name: `container_name: mkdocs`  
 
-## The final sample is like:
+## The final sample is like
 
 ```yaml
 version: "3.7"
@@ -47,7 +60,8 @@ Add new entry in `docker-compose.env` with you new docker file name
 `-f $MY_DOCKER_SERVICES_DIR/docker-compose-ubuntu.yaml \`
 
 ---
-## Install 
+
+## Install
 
 ```sh
 #make a folder to put script
