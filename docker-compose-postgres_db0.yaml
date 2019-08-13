@@ -3,10 +3,8 @@ services:
   postgres_db0:
     container_name: postgres_db0
     image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=db0
+    env_file:
+      - $THE_MONKEY_IN_THE_JUNGLE/postgres_db0.env
     tty: true
     ports:
-      - 5432:5432
+      - 54320:5432

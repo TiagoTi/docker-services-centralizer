@@ -6,7 +6,7 @@ services:
     container_name: vanellope
     working_dir: /root/src
     env_file:
-      - $HOME/projects/vanelope/.vscode/vanellope.env
+      - $THE_MONKEY_IN_THE_JUNGLE/vanellope.env
     volumes:
       - $VANELLOPE_SRC:/root/src
     tty: true
@@ -21,6 +21,7 @@ services:
     command: >
       bash -c "apt update && 
       apt-get install -y python-psycopg2 && 
+      pip install django-cors-headers && 
       pip install -U -r api/requirements/development.txt;  
       python manage.py migrate && 
       python manage.py runserver 0.0.0.0:8008"

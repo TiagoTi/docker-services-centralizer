@@ -2,9 +2,12 @@ version: "3.7"
 
 services:
   sonar:
-    image: sonarqube
+    image: sonarqube:6.7-community
     container_name: sonar
-    tty: true
-    restart: always
     ports:
       - 9000:9000
+    depends_on:
+      - postgres_db0
+    env_file:
+      - $THE_MONKEY_IN_THE_JUNGLE/sonar.env
+    tty: true

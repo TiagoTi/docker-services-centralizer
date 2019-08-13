@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  boo:
+    container_name: boo
+    image: python:3.6.4
+    environment:
+      - TWINE_USERNAME=<TWINE_USERNAME>
+      - TWINE_PASSWORD=<TWINE_PASSWORD>
+      - TWINE_REPOSITORY_URL=https://pypi.magazineluiza.com.br/pypi/
+      - PIP_INDEX_URL=https://USER:SENHA@pypi.magazineluiza.com.br/pypi/
+      - ENV=base
+      - PORT=8002
+      - TOKEN_API_LUIZA=<TOKEN_API_LUIZA>
+      - NEUMAN_SECRET_KEY=<NEUMAN_SECRET_KEY>
+      - TWIN_SECRET_KEY=<TWIN_SECRET_KEY>
+      - BRANCHES='50, 94, 300, 350, 400, 550, 590, 991, 994, 995, 997, 1100, 1250'
+    tty: true
+    ports:
+      - 5432:5432
