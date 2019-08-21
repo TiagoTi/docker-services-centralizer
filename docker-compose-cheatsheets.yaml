@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  cheatsheets:
+    build: $HOME/projects/cheatsheets
+    container_name: cheatsheets
+    restart: always
+    volumes:
+      - $HOME/projects/cheatsheets:/app
+      - rubygems:/usr/local/bundle
+    tty: true
+    ports:
+      - '4001:4001'
+      - '35729:35729'
+    command: 'env PORT=4001 HOST=0.0.0.0 yarn run dev'
+volumes:
+  rubygems:
