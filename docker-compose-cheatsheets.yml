@@ -1,0 +1,15 @@
+version: '3'
+services:
+  container_name: cheatsheets
+  cheatsheets:
+    build: /mnt/hd_um_tera/tiago/projetos/cheatsheets
+    volumes:
+      - /mnt/hd_um_tera/tiago/projetos/cheatsheets:/app
+      - rubygems:/usr/local/bundle
+    ports:
+      - '4001:4001'
+      - '35729:35729'
+    command: 'env PORT=4001 HOST=0.0.0.0 yarn run dev'
+
+volumes:
+  rubygems:

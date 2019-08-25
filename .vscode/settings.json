@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/tiago/.local/share/virtualenvs/docker-services-centralizer-JZEoKrVv/bin/python3.7"
+    // "python.pythonPath": "/home/tiago/.local/share/virtualenvs/docker-services-centralizer-JZEoKrVv/bin/python3.7"
+    "python.pythonPath": "/home/tiago/.local/share/virtualenvs/services-RXicxymb/bin/python3.7"
 }
