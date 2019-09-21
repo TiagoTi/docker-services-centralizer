@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  jupyter:
+    container_name: jupyter
+    build:
+      context: build/context/jupyter
+    tty: true
+    ports:
+      - 8888:8888
+    restart: always
+    volumes: 
+      - /home/tiago/projetos/notebooks:/home/jupyter/nootebook
+      #chomd 777 /home/tiago/projetos/notebooks
