@@ -3,3 +3,4 @@ volumes/*
 !volumes/mkdocs
 env/
 user-data-dir/
+.vscode
