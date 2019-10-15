@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  container:
+    container_name: container
+    image: alpine
+    tty: true
+    expose:
+      - 6379
+      - 5432
+      - 3306
+      - 8000
+      - 80
+      - 443
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 100M
+        reservations:
+          cpus: '0.0001'
+          memory: 20M
+
+#https://stackoverflow.com/questions/42345235/how-to-specify-memory-cpu-limit-in-docker-compose-version-3
+#apk update && apk add postgresql vim git mariadb python3 python3-dev redis nginx

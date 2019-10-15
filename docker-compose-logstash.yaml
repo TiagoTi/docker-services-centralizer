@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  logstash:
+    container_name: logstash
+    image: logstash:7.3.1
+    volumes:
+      - /home/tiago/projects/docker-services-centralizer/volumes/logstash/pipeline:/usr/share/logstash/pipeline
+    #  #- /home/tiago/projects/docker-services-centralizer/volumes/logtstash/share:/temp/compartilhado
+    tty: false
+    ports:
+      - 5044:5044
+      - 9600:9600
+      - 5959:5959
+#sudo chmod  777 -R /home/tiago/projects/docker-services-centralizer/volumes/logtstash/*
+#cp -R /usr/share/logstash /temp/compartilhado

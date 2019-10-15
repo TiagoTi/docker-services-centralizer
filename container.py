@@ -35,8 +35,9 @@ def docker_compose():
         commands =  {
             "start": f'{DOCKER_COMPOSE} {grouping_files()} start {" ".join(args.commons_args)}',
             "stop": f'{DOCKER_COMPOSE} {grouping_files()} stop {" ".join(args.commons_args)}',
-            "up": f'{DOCKER_COMPOSE} {grouping_files()} up -d {" ".join(args.commons_args)}',
-            "down": f'{DOCKER_COMPOSE} {grouping_files()} down {" ".join(args.commons_args)}'
+            "up": f'{DOCKER_COMPOSE} {grouping_files()} --compatibility up -d {" ".join(args.commons_args)}',
+            "down": f'{DOCKER_COMPOSE} {grouping_files()} down {" ".join(args.commons_args)}',
+            "build": f'{DOCKER_COMPOSE} {grouping_files()} build --force-rm  {" ".join(args.commons_args)}',
         }
 
         if args.command in commands.keys():
