@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  xeyes:
+    build:
+      context: build/context/xeyes
+    container_name: xeyes
+    volumes:
+      - $HOME/.Xauthority/:/root/.Xauthority
+    environment:
+      - DISPLAY=$DISPLAY
+    tty: true
