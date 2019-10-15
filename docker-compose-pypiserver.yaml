@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  pypi:
+    container_name: pypi
+    build:
+      context: build/context/pypiserver
+    tty: true
+
+#apt update && apt install python3 python3-pip -y && pip3 install pypiserver

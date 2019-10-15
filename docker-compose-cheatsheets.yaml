@@ -4,7 +4,6 @@ services:
   cheatsheets:
     build: $HOME/projects/cheatsheets
     container_name: cheatsheets
-    restart: always
     volumes:
       - $HOME/projects/cheatsheets:/app
       - rubygems:/usr/local/bundle

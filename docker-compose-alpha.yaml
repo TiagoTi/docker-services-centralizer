@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  alpha:
+    build:
+      context: $HOME/Projects/alpha/build/context/ubuntu
+    container_name: alpha
+    volumes:
+      - $HOME/projects:$HOME/projects
+    tty: true

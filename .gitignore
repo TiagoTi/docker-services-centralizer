@@ -1,3 +1,5 @@
 .env
 volumes/*
 !volumes/mkdocs
+env/
+user-data-dir/
