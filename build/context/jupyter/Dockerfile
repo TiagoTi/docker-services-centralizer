@@ -1,12 +1,23 @@
 FROM python:3.6.4
-RUN pip install --upgrade pip
-RUN pip install jupyter
+
+RUN adduser --system --disabled-password --gecos ""  --uid 1000 jupyter && \
+    apt update -y && \
+    apt install -y vim && \
+    pip install --upgrade pip
+
+
+WORKDIR /home/jupyter
+
+USER jupyter
+
+RUN pip3 install --user jupyter scikit-learn pandas plotly lime matplotlib seaborn && \
+    mkdir notebooks && \
+    mkdir -p /home/jupyter/.jupyter/
+
+ADD bashrc.sh /home/jupyter/.bashrc
+ADD jupyter_notebook_config.json /home/jupyter/.jupyter/jupyter_notebook_config.json
+
 EXPOSE 8888
 
-RUN groupadd -r jupyter && useradd --no-log-init -r -g jupyter jupyter
-RUN mkdir -p /home/jupyter/nootebook && chown jupyter -R /home/jupyter
-WORKDIR /home/jupyter
-USER jupyter
-CMD [ "jupyter", "notebook" ,"--ip='0.0.0.0'", "--port=8888", "--notebook-dir=/home/jupyter/nootebook"]
-
+ENTRYPOINT ["/home/jupyter/.local/bin/jupyter", "notebook", "--ip=0.0.0.0", "--notebook-dir=/home/jupyter/notebooks", "--no-browser"]
 

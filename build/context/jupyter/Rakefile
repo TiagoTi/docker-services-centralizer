@@ -1,0 +1,43 @@
+desc 'build'
+task :build do
+    sh 'docker build --tag notebook:0.0.0 .'
+end
+
+desc 'run this docker'
+task  :run => [:stop, :remove] do
+    command = 'docker run -itd --name notebook notebook:0.0.0'
+    sh command
+end
+
+desc 'execute this docker'
+task  :execute do
+    command = 'docker exec -it notebook bash'
+    sh command
+end
+
+desc 'run this docker'
+task  :stop do
+    command = 'docker stop notebook'
+    sh command
+end
+
+desc 'run this docker'
+task  :remove do
+    command = 'docker rm -f  notebook'
+    sh command
+end
+
+
+desc 'execute this docker'
+task  :execute_non_root do
+    command = 'docker exec -it --user jupyter notebook bash'
+    sh command
+end
+
+
+desc 'run this docker'
+task  :runv => [:stop, :remove] do
+    command = 'docker run -itd --mount type=bind,source="$(pwd)"/vls,target=/home/jupyter/notebooks  --name notebook notebook:0.0.0'
+    sh command
+end
+

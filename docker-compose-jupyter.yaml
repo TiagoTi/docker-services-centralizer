@@ -9,5 +9,4 @@ services:
       - 8888:8888
     restart: always
     volumes: 
-      - /home/tiago/projetos/notebooks:/home/jupyter/nootebook
-      #chomd 777 /home/tiago/projetos/notebooks
+      - /home/tiago/projects/notebooks:/home/jupyter/notebooks
